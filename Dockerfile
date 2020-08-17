@@ -1,6 +1,7 @@
 FROM ubuntu:focal
 
 LABEL Description="Dockerized MiKTeX, Ubuntu 20.04" Vendor="Christian Schenk" Version="20.7"
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
