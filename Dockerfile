@@ -28,6 +28,8 @@ RUN    miktexsetup finish \
            --install biber-linux-x86_64 \
     && initexmf --admin --update-fndb
 
+RUN ln -s /usr/bin/miktex-kpsewhich /usr/bin/kpsewhich
+
 COPY entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
 
